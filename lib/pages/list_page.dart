@@ -5,6 +5,8 @@ import 'package:my_list/view_models/list_page_view_model.dart';
 import 'package:my_list/views/list_view_item.dart';
 import 'package:provider/provider.dart';
 
+import '../constants.dart';
+
 class ListPage extends StatelessWidget {
   const ListPage({Key? key}) : super(key: key);
 
@@ -27,11 +29,8 @@ class ListPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Popular',
-            style: TextStyle(fontSize: 25, color: Colors.black),
+            AppStrings.listPageTitle,
           ),
-          elevation: 0,
-          backgroundColor: Colors.white,
         ),
         body: Container(
           color: Colors.white,
