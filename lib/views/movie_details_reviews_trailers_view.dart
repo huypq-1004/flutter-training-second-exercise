@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:my_list/views/horizontal_separator_line.dart';
 import '../constants.dart';
 
 class MovieDetailsReviewsTrailersView extends StatelessWidget {
@@ -16,7 +16,7 @@ class MovieDetailsReviewsTrailersView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Container(height: 1, color: Colors.black12),
+      const HorizontalSeparatorLine(),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -62,7 +62,7 @@ class MovieDetailsReviewsTrailersView extends StatelessWidget {
               )),
         ],
       ),
-      Container(height: 1, color: Colors.black12),
+      const HorizontalSeparatorLine(),
     ]);
   }
 }

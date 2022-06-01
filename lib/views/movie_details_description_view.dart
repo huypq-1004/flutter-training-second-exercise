@@ -6,10 +6,12 @@ class MovieDetailsDescriptionView extends StatelessWidget {
 
   final String description;
 
+  static const _itemPadding = EdgeInsets.fromLTRB(20, 15, 20, 15);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+      padding: _itemPadding,
       child: Text(
         description,
       ),

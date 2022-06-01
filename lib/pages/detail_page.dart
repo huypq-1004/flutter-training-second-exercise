@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_list/view_models/detail_page_view_model.dart';
 import 'package:my_list/views/movie_details_banner.dart';
 import 'package:my_list/views/movie_details_title_view.dart';
+import 'package:my_list/views/horizontal_separator_line.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
@@ -26,7 +27,8 @@ class DetailPage extends StatelessWidget {
             AppStrings.detailPageTitle,
           ),
         ),
-        body: Column(
+        body: SingleChildScrollView(
+            child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             MovieDetailsBanner(
@@ -50,11 +52,11 @@ class DetailPage extends StatelessWidget {
                     .getGenres(context.read<DetailPageViewModel>().movieGenres),
                 releaseDate:
                     context.watch<DetailPageViewModel>().movie.releaseDate),
-            Container(height: 1, color: Colors.black12),
+            const HorizontalSeparatorLine(),
             MovieDetailsDescriptionView(
               description: context.watch<DetailPageViewModel>().movie.overview,
             ),
           ],
-        ));
+        )));
   }
 }
